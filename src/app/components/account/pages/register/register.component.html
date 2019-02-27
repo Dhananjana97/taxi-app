@@ -1,0 +1,121 @@
+<div class="register-box" style="width:80%;height: 80%;margin-top:20px">
+  <div class="register-logo" style="margin-top:20px">
+
+    <a href="../../index2.html"><b>TURN</b><br>Driver Registration</a>
+
+  {{drivers}}
+
+  </div>
+
+  <div class="register-box-body">
+    <p class="login-box-msg">Register a new membership</p>
+
+    <form #form="ngForm" (ngSubmit)="onSubmitAddDriver(form.value);form.reset()">
+
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" required name="fullname" placeholder="Full name" ngModel>
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+
+
+
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="address" placeholder="Address" ngModel>
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+
+
+      <div>Gender</div>
+      <div class="form-group has-feedback">
+        <select name="gender" class="form-control" style="width:50%;" ngModel>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+
+        </select>
+      </div>
+
+      <div class="form-group has-feedback">
+        Birthday: <br>
+        <div >
+          <input class="form-control"style="width: 50% " type="date" name="birthday" ngModel>
+        </div>
+
+      </div>
+
+
+
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="NIC Number" name="nicnumber" ngModel>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+
+      <div class="form-group has-feedback">
+        <input type="email" class="form-control" placeholder="Email" name="email" ngModel>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="Vehicle Number" name="vehiclenumber" ngModel>
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+
+
+
+      <div>
+        <div>Vehicle Type</div>
+
+        <div style="margin-left:20px" class="form-group has-feedback">
+          <select name="vehicletype" class="form-control"style="width: 50% " ngModel>
+            <option value="Three Wheel">Three Wheel</option>
+            <option value="Car">Car</option>
+            <option value="Van">Van</option>
+            <option value="Bus">Bus</option>
+          </select>
+
+        </div>
+      </div>
+
+      <div>
+        <div>Vehicle Type</div>
+
+        <div style="margin-left:20px" class="form-group has-feedback">
+          <select name="vehiclemodel" class="form-control"style="width: 50% " ngModel>
+            <option value="Three Wheel">Three Wheel</option>
+            <option value="Car">Car</option>
+            <option value="Van">Van</option>
+            <option value="Bus">Bus</option>
+          </select>
+
+        </div>
+      </div>
+
+      <div class="row">
+
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+        </div>
+        <!-- /.col -->
+      </div>
+
+
+
+
+        <!-- /.col -->
+
+    </form>
+
+    <!-- <div class="social-auth-links text-center">
+      <p>- OR -</p>
+      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign up using
+        Facebook</a>
+      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign up using
+        Google+</a>
+    </div> -->
+
+    <!-- <a [routerLink]="['/account','login']" class="text-center">I already have a membership</a>  -->
+  </div>
+  <!-- /.form-box -->
+</div>
+<!-- /.register-box -->

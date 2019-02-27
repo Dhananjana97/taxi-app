@@ -1,0 +1,28 @@
+<table class="w3-table w3-striped w3-bordered" >
+  <tr>
+    <th>Full Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Vehicle Type</th>
+    <th>Vehicle Number</th>
+    <th>Gender</th>
+    <th>Birthday</th>
+    <th>NIC Number</th>
+
+  </tr>
+
+  <tr *ngFor="let driver of drivers">
+    <td>{{driver.fullname}}</td>
+    <td>{{driver.address}}</td>
+    <td>{{driver.email}}</td>
+    <td>{{driver.vehicletype}}</td>
+    <td>{{driver.vehiclenumber}}</td>
+    <td>{{driver.gender}}</td>
+    <td>{{driver.birthday|date:'dd/MM/yyyy'}}</td>
+    <td>{{driver.nicnumber}}</td>
+
+  </tr>
+
+
+
+</table>
